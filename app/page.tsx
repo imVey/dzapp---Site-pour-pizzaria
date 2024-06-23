@@ -6,18 +6,20 @@ const pizzaIngredients = [
   { name: "Pizza 2", ingredients: "Tomato, cheese, pepperoni, onions" },
   { name: "Pizza 3", ingredients: "Tomato, cheese, jambon, olives" },
   { name: "Pizza 4", ingredients: "Tomato, cheese, bacon, ham" },
-  // Add more pizzas as needed
 ];
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Bienvenue chez Pizza Paradise</h1>
-      <div className="grid grid-cols-4 gap-4">
+      <h1 className="text-blue-600 text-lg font-bold">
+        Bienvenue chez Pizza Paradise
+      </h1>
+      <div className="grid grid-cols-4 gap-4 overflow-x-scroll">
         {pizzaIngredients.map((pizza) => (
           <div
             key={pizza.name}
-            className="card p-4 border border-gray-200 rounded-lg"
+            className="card p-4 border border-gray-200 rounded-lg cursor-pointer"
+            onClick={() => (window.location.href = "/pizza")}
           >
             <Image
               src="/pizza.jpg"
