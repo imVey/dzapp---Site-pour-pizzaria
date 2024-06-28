@@ -14,7 +14,7 @@ export default function Home() {
       <h1 className="text-blue-600 text-lg font-bold">
         Bienvenue chez Pizza Paradise
       </h1>
-      <div className="grid grid-cols-4 gap-4 overflow-x-scroll">
+      <div className="grid grid-cols-4 gap-4">
         {pizzaIngredients.map((pizza) => (
           <div
             key={pizza.name}
